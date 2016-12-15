@@ -1,0 +1,23 @@
+<launch>
+  
+    <!--<node name="stereo" pkg="uvc_camera" type="uvc_stereo_node" output="screen">
+      <param name="right/device" value="/dev/video0" />
+      <param name="left/device" value="/dev/video1" />
+      <param name="width" value="160" />
+      <param name="height" value="120" />
+      <param name="fps" value="15" />
+      <param name="frame_id" value="minoru_left_link" />
+    </node>-->
+    
+ <node name="image_view_right" pkg="image_view" type="image_view" respawn="false" output="screen">
+      <remap from="image" to="/minoru/right/image_raw"/>
+      <param name="autosize" value="true" />
+    </node>
+
+    <node name="image_view_left" pkg="image_view" type="image_view" respawn="false" output="screen">
+      <remap from="image" to="/minoru/left/image_raw"/>
+      <param name="autosize" value="true" />
+    </node>
+    
+  
+</launch>

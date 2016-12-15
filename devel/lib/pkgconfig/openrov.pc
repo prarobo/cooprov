@@ -1,0 +1,8 @@
+prefix=/home/prasanna/ros_hydro_arv/src/openrov/devel
+
+Name: openrov
+Description: Description of openrov
+Version: 0.0.0
+Cflags: -I/home/prasanna/ros_hydro_arv/src/openrov/include
+Libs: -L/home/prasanna/ros_hydro_arv/src/openrov/devel/lib 
+Requires: message_runtime

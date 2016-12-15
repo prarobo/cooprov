@@ -1,0 +1,6 @@
+<launch>      
+      <!-- Tf publisher -->
+      <node name="openrov_tf_publisher" pkg="openrov" type="openrov_tf_publisher">
+      </node>
+      
+</launch>

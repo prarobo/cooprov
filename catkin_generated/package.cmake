@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "openrov")
+set(openrov_MAINTAINER "prasanna <prasanna@todo.todo>")
+set(openrov_DEPRECATED "")
+set(openrov_VERSION "0.0.0")
+set(openrov_BUILD_DEPENDS "roscpp" "sensor_msgs" "libpcl-all-dev" "tf" "message_generation" "message_runtime")
+set(openrov_RUN_DEPENDS "roscpp" "sensor_msgs" "libpcl-all" "tf" "rospy" "message_runtime")
+set(openrov_BUILDTOOL_DEPENDS "catkin")

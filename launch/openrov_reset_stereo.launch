@@ -1,0 +1,26 @@
+<launch>
+      <!-- Launching the keyboard based teleop node -->
+      <node name="openrov_teleop_reset" pkg="openrov" type="openrov_teleop_reset" output="screen" >
+      </node>
+      
+      <!-- Launching the velocity handler node -->
+      <node name="openrov_velocity_handler_reset" pkg="openrov" type="openrov_velocity_handler_reset">
+      </node>
+      
+      <!-- Launching the serial port connection -->
+      <!-- <machine name="openrov" address="openrov" user="pi"/>
+      <node machine="openrov" name="openrov_arduino_serial_node" pkg="rosserial_python" type="serial_node.py">
+      <param name="~port" value="/dev/arduinoNano" />
+      <param name="~baud" value="115200" />
+      </node> -->
+      
+      <!-- Launching the stereo camera -->
+      <!-- <node name="stereo" pkg="uvc_camera" type="uvc_stereo_node" output="screen" >
+      <param name="right/device" value="/dev/video1" />
+      <param name="left/device" value="/dev/video2" />
+      <param name="width" value="320" />
+      <param name="height" value="240" />
+      <param name="fps" value="30" />
+      <param name="frame_id" value="minoru_link" />
+      </node> -->
+</launch>

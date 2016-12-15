@@ -1,0 +1,22 @@
+<launch>
+      <!-- Launching the joystick node -->      
+      <node name="joy_node" pkg="joy" type="joy_node" output="screen" >
+      <param name="dev" value="/dev/input/js1" />
+      </node>
+
+      <!-- Launching the keyboard based teleop node -->      
+      <node name="openrov_teleop_joy_optim" pkg="openrov" type="openrov_teleop_joy_optim.py" output="screen" >
+      </node>
+      
+      <!-- Launching the serial port connection -->
+      <!-- <machine name="openrov" address="http://192.168.0.2:11311" user="pi"/>
+      <node machine="openrov" name="openrov_arduino_serial_node" pkg="rosserial_python" type="serial_node.py">
+      <param name="~port" value="/dev/arduinoNano" />
+      <param name="~baud" value="115200" />
+      </node> -->
+      
+      <!--<node pkg="openrov" type="openrov_tf.py" name="openrov_tf" />-->
+      <!-- Tf publisher -->
+      <node name="openrov_tf_publisher" pkg="openrov" type="openrov_tf_publisher">
+      </node>
+</launch>

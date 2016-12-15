@@ -1,0 +1,16 @@
+<launch>
+      <!-- Launching the keyboard based teleop node -->
+      <node name="openrov_teleop_reset" pkg="openrov" type="openrov_teleop_reset" output="screen" >
+      </node>
+      
+      <!-- Launching the velocity handler node -->
+      <node name="openrov_velocity_handler_reset" pkg="openrov" type="openrov_velocity_handler_reset">
+      </node>
+      
+      <!-- Launching the serial port connection -->
+      <!-- <machine name="openrov" address="http://192.168.0.2:11311" user="pi"/>
+      <node machine="openrov" name="openrov_arduino_serial_node" pkg="rosserial_python" type="serial_node.py">
+      <param name="~port" value="/dev/arduinoNano" />
+      <param name="~baud" value="115200" />
+      </node> -->
+</launch>
